@@ -8,9 +8,11 @@ function playGrid(col, row) {
     div.style.border = "1px black solid"; //testing
     div.style.height = "30px";
     div.style.width = "30px";
-    container.style.gridTemplateColumns = `repeat(${col}, ${div.style.height})`;
-    container.style.gridTemplateRows = `repeat(${row}, ${div.style.height});`;
-    // div.style.float = "left";
+    container.style.width = "960px";
+    container.style.gridTemplateColumns = `repeat(${col}, auto`;
+    container.style.gridTemplateRows = `repeat(${row}, auto);`;
+    div.style.float = "left";
   }
+  return;
 }
 playGrid(16, 16);
