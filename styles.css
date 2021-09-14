@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;600&display=swap");
-* {
+/* * {
+  margin: 0 auto;
+  padding: 0 auto;
+} */
+body {
   margin: 0 auto;
   padding: 0 auto;
 }
 main,
 button {
   font-family: "Yanone Kaffeesatz", sans-serif;
-  font-weight: 400;
-  font-size: 25px;
+  font-weight: 600;
+  font-size: 20px;
 }
 button {
   padding: 5px 8px;
@@ -21,11 +25,16 @@ button {
 .container {
   margin: 0 auto;
   display: grid;
+  width: 500px;
+  height: 500px;
   justify-content: center;
+  border: 1px black solid;
+  border-radius: 5px;
 }
 
 /*** BUTTON CONTAINER ***/
 .game-buttons {
+  background-color: lightgray;
   display: flex;
   justify-content: space-evenly;
   margin: 30px auto;
