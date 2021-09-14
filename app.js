@@ -5,6 +5,7 @@ const rainBtn = document.querySelector("#rainbow");
 const eraseBtn = document.querySelector("#eraser");
 
 let defaultColor = "";
+let defaultNum = 16;
 
 function playGrid(num) {
   container.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
