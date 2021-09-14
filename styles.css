@@ -6,6 +6,7 @@
 body {
   margin: 0 auto;
   padding: 0 auto;
+  background-color: lightslategray;
 }
 main,
 button {
@@ -15,21 +16,24 @@ button {
 }
 button {
   padding: 5px 8px;
+  margin: 5px 0;
 }
 /*** HEADER***/
 #header-title {
   text-align: center;
   margin: 20px auto;
+  padding: 7px 0;
+  background-color: lightgray;
+  width: 500px;
 }
 /*** GAME CONTAINER ***/
 .container {
+  background-color: white;
   margin: 0 auto;
   display: grid;
   width: 500px;
   height: 500px;
   justify-content: center;
-  border: 1px black solid;
-  border-radius: 5px;
 }
 
 /*** BUTTON CONTAINER ***/
@@ -39,4 +43,11 @@ button {
   justify-content: space-evenly;
   margin: 30px auto;
   width: 500px;
+}
+
+.game-buttons,
+.container,
+#header-title {
+  border: 1px black solid;
+  border-radius: 3px;
 }
