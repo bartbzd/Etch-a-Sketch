@@ -19,11 +19,9 @@ function playGrid(num) {
   }
 }
 
-let num = prompt("Enter a number", "");
-playGrid(num);
+playGrid(defaultNum);
 function resetColor() {
   container.innerHTML = "";
-  num = prompt("Enter a number", "");
   playGrid(num);
 }
 
