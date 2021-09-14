@@ -19,8 +19,7 @@ function playGrid(num) {
   }
 }
 
-playGrid(defaultNum);
-function resetColor() {
+function resetGrid() {
   container.innerHTML = "";
   playGrid(num);
 }
@@ -47,3 +46,5 @@ rainBtn.addEventListener("click", () => {
   const B = (Math.random() * 256) >> 0;
   defaultColor = `rgb(${R}, ${G}, ${B})`;
 });
+
+playGrid(defaultNum);
