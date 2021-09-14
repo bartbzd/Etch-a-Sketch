@@ -1,18 +1,23 @@
 const container = document.querySelector(".container");
+const blackBtn = document.querySelector("black-btn");
+const resetBtn = document.querySelector("reset-btn");
 
-function playGrid(col, row) {
-  //16 x 16
-  for (let i = 0; i < col * row; i++) {
+function playGrid(num) {
+  for (let i = 0; i < num * num; i++) {
     const div = document.createElement("div");
     container.appendChild(div);
-    div.style.border = "1px black solid"; //testing
-    div.style.height = "30px";
-    div.style.width = "30px";
-    container.style.width = "960px";
-    container.style.gridTemplateColumns = `repeat(${col}, auto`;
-    container.style.gridTemplateRows = `repeat(${row}, auto);`;
-    div.style.float = "left";
+    div.style.border = "1px solid grey"; //
+    container.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${num}, 1fr)`;
+    div.addEventListener("mouseover", colorSelect);
   }
-  return;
 }
-playGrid(16, 16);
+playGrid(16);
+
+function resetColor(e) {
+  e.target.style.backgroundColor = "";
+}
+
+function colorSelect(e) {
+  e.target.style.backgroundColor = "black";
+}
