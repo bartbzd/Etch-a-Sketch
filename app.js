@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const cPicker = document.querySelector("#cPicker");
 const blackBtn = document.querySelector("#black");
 const randBtn = document.querySelector("#random");
 const eraserBtn = document.querySelector("#eraser");
@@ -35,10 +36,6 @@ function colorPick(e) {
     e.target.style.backgroundColor = "#18191A";
   }
 
-  if (defaultColor === "red") {
-    e.target.style.backgroundColor = "red";
-  }
-
   if (defaultColor === "#FFFFFF") {
     e.target.style.backgroundColor = "#FFFFFF";
   }
@@ -55,8 +52,7 @@ sizeText.innerHTML = slider.value;
 slider.addEventListener("change", () => {
   sizeText.innerHTML = slider.value;
   sliderValue = slider.value;
-  defaultColor = "";
-  container.innerHTML = "";
+
   resetGrid(sliderValue);
 });
 // EVENT LISTENERS
