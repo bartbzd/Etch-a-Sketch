@@ -17,16 +17,15 @@ button {
 button {
   padding: 5px 8px;
   margin: 5px 0;
+  border-radius: 5px;
+  border: 2px rgb(76, 87, 97) solid;
 }
 button:focus {
   box-sizing: border-box;
   border: 2px rgb(76, 87, 97) solid;
-  border-radius: 3px;
+  border-radius: 5px;
+  background-color: lightsteelblue;
 }
-/* input:focus {
-  border: 3px rgb(76, 87, 97) solid;
-  border-radius: 3px;
-} */
 /*** HEADER***/
 #header-title {
   text-align: center;
@@ -58,7 +57,9 @@ button:focus {
   align-items: center;
   /* border: none; */
   height: 38px;
-  margin: 5px;
+  margin: 5px 2px;
+  border: 2px rgb(76, 87, 97) solid;
+  border-radius: 5px;
 }
 .game-buttons {
   background-color: lightgray;
