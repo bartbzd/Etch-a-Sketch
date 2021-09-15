@@ -26,6 +26,10 @@ button:focus {
   border-radius: 5px;
   background-color: lightsteelblue;
 }
+button:hover {
+  border: 2px rgb(76, 87, 97) solid;
+  transform: scale(1.05);
+}
 /*** HEADER***/
 #header-title {
   text-align: center;
