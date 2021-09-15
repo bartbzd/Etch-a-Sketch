@@ -18,6 +18,15 @@ button {
   padding: 5px 8px;
   margin: 5px 0;
 }
+button:focus {
+  box-sizing: border-box;
+  border: 2px rgb(76, 87, 97) solid;
+  border-radius: 3px;
+}
+/* input:focus {
+  border: 3px rgb(76, 87, 97) solid;
+  border-radius: 3px;
+} */
 /*** HEADER***/
 #header-title {
   text-align: center;
@@ -34,9 +43,23 @@ button {
   width: 500px;
   height: 500px;
   justify-content: center;
+  box-shadow: 5px 5px 10px rgb(74, 84, 94);
 }
 
 /*** BUTTON CONTAINER ***/
+.grid-slider {
+  margin: 0 auto;
+  padding-top: 5px;
+  text-align: center;
+}
+#cPicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: none; */
+  height: 38px;
+  margin: 5px;
+}
 .game-buttons {
   background-color: lightgray;
   display: flex;
@@ -50,4 +73,5 @@ button {
 #header-title {
   border: 1px black solid;
   border-radius: 3px;
+  box-shadow: 5px 5px 10px rgb(74, 84, 94);
 }
