@@ -1,11 +1,14 @@
 const container = document.querySelector(".container");
-const blackBtn = document.querySelector("#black-btn");
-const resetBtn = document.querySelector("#reset-btn");
-const rainBtn = document.querySelector("#rainbow");
-const eraseBtn = document.querySelector("#eraser");
+const blackBtn = document.querySelector("#black");
+const randBtn = document.querySelector("#random");
+const eraserBtn = document.querySelector("#eraser");
+const resetBtn = document.querySelector("#reset");
+const sizeText = document.querySelector("#grid-size-text");
+const slider = document.querySelector("#slider-range");
 
 let defaultColor = "";
 let defaultNum = 16;
+let sliderValue = 16;
 
 function playGrid(num) {
   container.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
@@ -14,37 +17,60 @@ function playGrid(num) {
   for (let i = 0; i < num * num; i++) {
     const div = document.createElement("div");
     container.appendChild(div);
-    div.style.border = "1px solid grey"; //
-    div.addEventListener("mouseover", colorSelect);
+    // div.style.border = "1px solid #242526";
+    div.addEventListener("mouseover", colorPick);
   }
 }
 
 function resetGrid() {
+  resetBtn.blur();
+  defaultColor = "";
   container.innerHTML = "";
-  playGrid(num);
+  playGrid(sliderValue);
 }
 
 // Color Picker
-function colorSelect(e) {
-  if (defaultColor === "") {
-    e.target.style.backgroundColor = "black";
-  } else if (defaultColor === "red") {
+function colorPick(e) {
+  if (defaultColor === "#18191A") {
+    e.target.style.backgroundColor = "#18191A";
+  }
+
+  if (defaultColor === "red") {
     e.target.style.backgroundColor = "red";
+  }
+
+  if (defaultColor === "#FFFFFF") {
+    e.target.style.backgroundColor = "#FFFFFF";
+  }
+
+  if (defaultColor === "rgb") {
+    const R = (Math.random() * 256) >> 0;
+    const G = (Math.random() * 256) >> 0;
+    const B = (Math.random() * 256) >> 0;
+    e.target.style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
   }
 }
 
-// RESET COLORS
-resetBtn.addEventListener("click", resetColor, () => {
-  resetBtn.stlyle.buttonFocus = "outline:0";
+sizeText.innerHTML = slider.value;
+slider.addEventListener("change", () => {
+  sizeText.innerHTML = slider.value;
+  sliderValue = slider.value;
+  defaultColor = "";
+  container.innerHTML = "";
+  resetGrid(sliderValue);
 });
+// EVENT LISTENERS
 blackBtn.addEventListener("click", () => {
-  defaultColor = "red";
+  defaultColor = "#18191A";
 });
-rainBtn.addEventListener("click", () => {
-  const R = (Math.random() * 256) >> 0;
-  const G = (Math.random() * 256) >> 0;
-  const B = (Math.random() * 256) >> 0;
-  defaultColor = `rgb(${R}, ${G}, ${B})`;
+resetBtn.addEventListener("click", resetGrid);
+eraserBtn.addEventListener("click", () => {
+  defaultColor = "#FFFFFF";
 });
 
+randBtn.addEventListener("click", () => {
+  defaultColor = "rgb";
+});
+
+//Initialize Default Grid
 playGrid(defaultNum);
