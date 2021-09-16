@@ -9,31 +9,27 @@ const slider = document.querySelector("#slider-range");
 
 let defaultColor = "";
 let defaultNum = 16;
-let sliderValue = 16;
+// let sliderValue = 16;
 
-function playGrid(num) {
+function resizeGrid(num) {
   container.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
   container.style.gridTemplateRows = `repeat(${num}, 1fr)`;
 
   for (let i = 0; i < num * num; i++) {
     const div = document.createElement("div");
     container.appendChild(div);
-    // div.style.border = "1px solid #242526";
-    div.addEventListener("mouseover", colorPick);
+    div.style.border = "1px solid #242526";
+    div.addEventListener("click", colorGrid);
   }
 }
 
-function resetGrid() {
-  resetBtn.blur();
-  defaultColor = "";
-  container.innerHTML = "";
-  playGrid(sliderValue);
-}
-
-// Color Picker
-function colorPick(e) {
-  if (defaultColor === "#18191A") {
-    e.target.style.backgroundColor = "#18191A";
+// Button Picks
+function colorGrid(e) {
+  if (defaultColor === cPicker.value) {
+    e.target.style.backgroundColor = cPicker.value;
+  }
+  if (defaultColor === "#000000") {
+    e.target.style.backgroundColor = "#000000";
   }
 
   if (defaultColor === "#FFFFFF") {
@@ -48,25 +44,31 @@ function colorPick(e) {
   }
 }
 
-sizeText.innerHTML = slider.value;
-slider.addEventListener("change", () => {
-  sizeText.innerHTML = slider.value;
-  sliderValue = slider.value;
-
-  resetGrid(sliderValue);
-});
+function resetGrid() {
+  resetBtn.blur();
+  defaultColor = cPicker.value;
+  container.innerHTML = "";
+  resizeGrid(slider.value);
+}
 // EVENT LISTENERS
+cPicker.addEventListener("input", () => {
+  defaultColor = cPicker.value;
+  console.log(cPicker.value);
+});
 blackBtn.addEventListener("click", () => {
-  defaultColor = "#18191A";
+  defaultColor = "#000000";
 });
 resetBtn.addEventListener("click", resetGrid);
 eraserBtn.addEventListener("click", () => {
   defaultColor = "#FFFFFF";
 });
-
 randBtn.addEventListener("click", () => {
   defaultColor = "rgb";
 });
+sizeText.innerHTML = `${slider.value} x ${slider.value}`;
+slider.addEventListener("input", () => {
+  sizeText.innerHTML = `${slider.value} x ${slider.value}`;
+  resetGrid(slider.value);
+});
 
-//Initialize Default Grid
-playGrid(defaultNum);
+resizeGrid(defaultNum);
