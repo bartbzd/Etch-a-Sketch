@@ -6,7 +6,7 @@
 body {
   margin: 0 auto;
   padding: 0 auto;
-  background-color: lightslategray;
+  background-color: rgb(110, 155, 199);
 }
 main,
 button {
@@ -17,25 +17,24 @@ button {
 button {
   padding: 5px 8px;
   margin: 5px 0;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 2px rgb(76, 87, 97) solid;
 }
 button:focus {
   box-sizing: border-box;
-  border: 2px rgb(76, 87, 97) solid;
-  border-radius: 5px;
-  background-color: lightsteelblue;
+  border-radius: 3px;
+  background-color: rgb(187, 207, 235);
 }
 button:hover {
-  border: 2px rgb(76, 87, 97) solid;
-  transform: scale(1.05);
+  background-color: rgb(187, 207, 235);
+  /* transform: scale(1.02); */
 }
 /*** HEADER***/
 #header-title {
   text-align: center;
   margin: 20px auto;
   padding: 7px 0;
-  background-color: lightgray;
+  background-color: #e8d6cb;
   width: 500px;
 }
 /*** GAME CONTAINER ***/
@@ -59,24 +58,26 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: none; */
   height: 38px;
   margin: 5px 2px;
   border: 2px rgb(76, 87, 97) solid;
-  border-radius: 5px;
+  border-radius: 3px;
+}
+#cPicker:focus {
+  background-color: rgb(187, 207, 235);
 }
 .game-buttons {
-  background-color: lightgray;
+  background-color: #e8d6cb;
   display: flex;
   justify-content: space-evenly;
-  margin: 30px auto;
+  margin: 20px auto;
   width: 500px;
 }
 
 .game-buttons,
 .container,
 #header-title {
-  border: 1px black solid;
+  border: 2px black solid;
   border-radius: 3px;
   box-shadow: 5px 5px 10px rgb(74, 84, 94);
 }
