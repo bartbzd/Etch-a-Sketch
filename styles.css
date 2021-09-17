@@ -142,7 +142,8 @@ i:visited {
     margin: 6px 2px;
   }
   #cPicker {
-    height: 32px;
+    margin: 0 2px;
+    padding: 0 2px;
   }
 }
 @media only screen and (max-height: 725px) and (min-width: 600px) {
