@@ -123,9 +123,6 @@ i:visited {
   #header-title {
     width: 400px;
   }
-  .game-buttons {
-    height: 48px !important;
-  }
   .container {
     height: 400px;
   }
@@ -136,14 +133,12 @@ i:visited {
   .grid-slider {
     font-size: 18px;
   }
-  button,
-  #cPicker {
+  button {
     height: 32px;
     margin: 6px 2px;
   }
   #cPicker {
-    margin: 0 2px;
-    padding: 0 2px;
+    height: 32px;
   }
 }
 @media only screen and (max-height: 725px) and (min-width: 600px) {
