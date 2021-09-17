@@ -133,7 +133,8 @@ i:visited {
   .grid-slider {
     font-size: 16px;
   }
-  button {
+  button,
+  #cPicker {
     height: 32px;
     margin: 6px 2px;
   }
