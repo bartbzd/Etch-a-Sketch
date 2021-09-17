@@ -6,6 +6,7 @@ const eraserBtn = document.querySelector("#eraser");
 const resetBtn = document.querySelector("#reset");
 const sizeText = document.querySelector("#grid-size-text");
 const slider = document.querySelector("#slider-range");
+const buttons = document.querySelectorAll(".buttons");
 
 let defaultColor = "";
 let defaultNum = 16;
@@ -70,5 +71,13 @@ slider.addEventListener("input", () => {
   sizeText.innerHTML = `${slider.value} x ${slider.value}`;
   resetGrid(slider.value);
 });
+for (let btn of buttons) {
+  btn.addEventListener("click", () => {
+    for (let btn of buttons) {
+      btn.classList.remove("active");
+    }
+    btn.classList.add("active");
+  });
+}
 
 resizeGrid(defaultNum);
