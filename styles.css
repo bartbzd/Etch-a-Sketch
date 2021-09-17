@@ -19,11 +19,7 @@ button {
   border-radius: 3px;
   border: 2px rgb(76, 87, 97) solid;
 }
-button:focus {
-  box-sizing: border-box;
-  border-radius: 3px;
-  background-color: rgb(187, 207, 235);
-}
+
 button:hover {
   background-color: rgb(187, 207, 235);
 }
@@ -95,7 +91,9 @@ h3 {
   margin: 20px auto;
   width: 500px;
 }
-
+.active {
+  background-color: rgb(187, 207, 235);
+}
 /*** FOOTER ICON ***/
 i {
   margin: 0 10px;
