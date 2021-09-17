@@ -134,7 +134,7 @@ i:visited {
   }
   button,
   .grid-slider {
-    font-size: 16px;
+    font-size: 18px;
   }
   button,
   #cPicker {
@@ -145,7 +145,7 @@ i:visited {
     height: 32px;
   }
 }
-@media only screen and (max-height: 725px) {
+@media only screen and (max-height: 725px) and (min-width: 600px) {
   footer {
     display: none;
   }
