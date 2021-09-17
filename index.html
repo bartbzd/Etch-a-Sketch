@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <title>Etch-a-Sketch</title>
   </head>
   <body>
-    <main>
+    <header>
       <div class="title">
         <h1 id="header-title">Etch-a-Sketch</h1>
       </div>
+    </header>
+    <main>
       <div class="container"></div>
 
       <div class="game-buttons">
@@ -34,7 +40,16 @@
         <button class="buttons" id="eraser">Eraser</button>
         <button class="buttons" id="reset">Reset</button>
       </div>
+      <div>
+        <p class="secret"><em>You found a secret!</em><br />CONGRATULATIONS!</p>
+      </div>
     </main>
+    <footer>
+      <h3>bartbzd</h3>
+      <a href="https://github.com/bartbzd">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
