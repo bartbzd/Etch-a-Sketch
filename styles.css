@@ -137,7 +137,7 @@ i:visited {
   button,
   #cPicker {
     height: 32px !important;
-    margin: 6px;
+    margin: 6px 2px;
   }
 }
 @media only screen and (max-height: 725px) {
