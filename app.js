@@ -9,7 +9,6 @@ const slider = document.querySelector("#slider-range");
 
 let defaultColor = "";
 let defaultNum = 16;
-// let sliderValue = 16;
 
 function resizeGrid(num) {
   container.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
@@ -18,8 +17,8 @@ function resizeGrid(num) {
   for (let i = 0; i < num * num; i++) {
     const div = document.createElement("div");
     container.appendChild(div);
-    div.style.border = "1px solid #242526";
-    div.addEventListener("click", colorGrid);
+    div.style.border = "1px solid #111111";
+    div.addEventListener("mouseover", colorGrid);
   }
 }
 
@@ -50,6 +49,7 @@ function resetGrid() {
   container.innerHTML = "";
   resizeGrid(slider.value);
 }
+
 // EVENT LISTENERS
 cPicker.addEventListener("input", () => {
   defaultColor = cPicker.value;
