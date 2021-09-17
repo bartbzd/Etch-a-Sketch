@@ -15,7 +15,7 @@ footer {
 }
 button {
   padding: 5px 8px;
-  margin: 5px 2px;
+  margin: 3px 2px;
   border-radius: 3px;
   border: 2px rgb(76, 87, 97) solid;
 }
@@ -79,7 +79,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 38px;
+  height: 34px;
   margin: 5px 2px;
   border: 2px rgb(76, 87, 97) solid;
   border-radius: 3px;
@@ -126,7 +126,7 @@ i:visited {
     width: 400px;
   }
   .game-buttons {
-    height: 48px;
+    height: 48px !important;
   }
   .container {
     height: 400px;
@@ -140,8 +140,11 @@ i:visited {
   }
   button,
   #cPicker {
-    height: 32px !important;
+    height: 32px;
     margin: 6px 2px;
+  }
+  #cPicker {
+    height: 32px;
   }
 }
 @media only screen and (max-height: 725px) {
