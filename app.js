@@ -71,6 +71,7 @@ slider.addEventListener("input", () => {
 for (let btn of buttons) {
   cPicker.addEventListener("input", () => {
     defaultColor = cPicker.value;
+    cPicker.classList.add("active");
     btn.classList.remove("active");
   });
   btn.addEventListener("click", () => {
