@@ -68,7 +68,7 @@ slider.addEventListener("input", () => {
   resetGrid(slider.value);
 });
 for (let btn of buttons) {
-  cPicker.addEventListener("input", () => {
+  cPicker.addEventListener("click", () => {
     defaultColor = cPicker.value;
     cPicker.classList.add("active");
     btn.classList.remove("active");
