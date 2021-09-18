@@ -52,10 +52,6 @@ function resetGrid() {
 }
 
 // EVENT LISTENERS
-cPicker.addEventListener("input", () => {
-  defaultColor = cPicker.value;
-  console.log(cPicker.value);
-});
 blackBtn.addEventListener("click", () => {
   defaultColor = "#000000";
 });
@@ -72,11 +68,17 @@ slider.addEventListener("input", () => {
   resetGrid(slider.value);
 });
 for (let btn of buttons) {
+  cPicker.addEventListener("input", () => {
+    defaultColor = cPicker.value;
+    cPicker.classList.add("active");
+    btn.classList.remove("active");
+  });
   btn.addEventListener("click", () => {
     for (let btn of buttons) {
       btn.classList.remove("active");
     }
     btn.classList.add("active");
+    cPicker.classList.remove("active");
   });
 }
 
