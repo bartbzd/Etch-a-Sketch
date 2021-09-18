@@ -139,6 +139,9 @@ i:visited {
     box-sizing: border-box;
     height: 32px;
     margin: 6px 2px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 }
 @media only screen and (max-height: 725px) and (min-width: 600px) {
