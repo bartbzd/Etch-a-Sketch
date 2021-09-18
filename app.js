@@ -46,7 +46,6 @@ function colorGrid(e) {
 
 function resetGrid() {
   resetBtn.blur();
-  defaultColor = cPicker.value;
   container.innerHTML = "";
   resizeGrid(slider.value);
 }
