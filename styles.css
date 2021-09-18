@@ -79,6 +79,9 @@ h3 {
   margin: 5px 2px;
   border: 2px rgb(76, 87, 97) solid;
   border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 #cPicker:focus {
   background-color: rgb(187, 207, 235);
@@ -139,9 +142,6 @@ i:visited {
     box-sizing: border-box;
     height: 32px;
     margin: 6px 2px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
   }
 }
 @media only screen and (max-height: 725px) and (min-width: 600px) {
