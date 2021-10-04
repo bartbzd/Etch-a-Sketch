@@ -10,9 +10,9 @@
 
 ## How to use
 
-- Select the RGB Picker, Black or Random button for a color and then mouseover sketchpad
-- Select the Eraser button to erase one cell or the Reset button to erase all
-- Adjust size of grid using the slider
+- Select RGB Picker, Black or Random button before mousing over sketchpad
+- Select Eraser button to erase one cell or Reset button to erase all
+- Adjust size of grid using slider
 
 ## Things I learned
 
