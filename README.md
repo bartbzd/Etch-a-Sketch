@@ -1,5 +1,7 @@
 # Etch-a-Sketch
 
+- A simple Etch-a-Sketch application
+
 ## Languages used:
 
 - HTML
@@ -18,7 +20,5 @@
 - Responsive design
 - Console.dir()
 - Asset import
-
----
 
 ### [Live Demo](https://bartbzd.github.io/Etch-a-Sketch/)
