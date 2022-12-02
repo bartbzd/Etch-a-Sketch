@@ -21,4 +21,4 @@
 - Console.dir()
 - Asset import
 
-### [Live Demo](https://bartbzd.github.io/Etch-a-Sketch/)
+### [Live Demo](https://bartbzd.github.io/etch-a-sketch/)
