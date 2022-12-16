@@ -1,6 +1,6 @@
 # Etch-a-Sketch
 
-![app-picture](https://github.com/bartbzd/blob/etch-a-sketch/main/img/etch-a-sketch-pic.png)
+![app-picture](https://github.com/bartbzd/blob/etch-a-sketch/main/img/etch-a-sketch-pic.svg)
 
 ### [Live Demo](https://bartbzd.github.io/etch-a-sketch/)
 
