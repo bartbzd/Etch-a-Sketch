@@ -1,6 +1,8 @@
 # Etch-a-Sketch
 
-- A simple Etch-a-Sketch application
+![app-picture](https://github.com/bartbzd/etch-a-sketch/main/img/etch-a-sketch-pic.png)
+
+### [Live Demo](https://bartbzd.github.io/etch-a-sketch/)
 
 ## Languages used:
 
@@ -21,4 +23,4 @@
 - Console.dir()
 - Asset import
 
-### [Live Demo](https://bartbzd.github.io/etch-a-sketch/)
+
